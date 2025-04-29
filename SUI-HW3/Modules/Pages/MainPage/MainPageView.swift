@@ -41,14 +41,14 @@ struct CellView: View {
     var text: String = ""
     
     var body: some View {
-        HStack {
-            VStack(alignment: .leading) {
-                Text(title)
-                    .font(.headline)
-                    .padding(.bottom, 5)
-                Text(text)
-            }
-            Spacer()
+        VStack(alignment: .leading) {
+            Text(title)
+                .font(.headline)
+                .padding(.bottom, 5)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            Text(text)
+                .frame(maxWidth: .infinity, alignment: .leading)
+
         }
         .padding()
         .frame(maxWidth: .infinity)
